@@ -1,14 +1,12 @@
-
 // Functional Component
 const PrimeraApp = () => {
+  const saludo = "Hola Juan Carloh";
   return (
-    //   <Fragment> o
     <>
-          <h1> Hola Juan Carloh </h1>
-          <p>Mi primer componente</p>
+      <h1> {saludo} </h1>
+      <p>Mi primer componente</p>
     </>
-    //   </Fragment>
-  )
+  );
 };
 
 export default PrimeraApp;
