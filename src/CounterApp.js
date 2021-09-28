@@ -1,15 +1,20 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 // Functional Component
 const CounterApp = ({ value }) => {
-  const handleAdd = (e) => {
-    console.log(e);
+  // Hook
+  const [counter, setCounter] = useState(0); // retorna un [] con dos valores.
+
+  // HandleAdd
+  const handleAdd = () => {
+    setCounter(counter + 1);
   };
 
   return (
     <>
       <h1>CounterApp</h1>
-      <h2> {value} </h2>
+      <h2> {counter} </h2>
 
       <button onClick={handleAdd}>+1</button>
     </>
@@ -17,7 +22,7 @@ const CounterApp = ({ value }) => {
 };
 
 CounterApp.propTypes = {
-  value: PropTypes.number
+  value: PropTypes.number,
 };
 
 export default CounterApp;
