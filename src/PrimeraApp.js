@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types';
+
 // Functional Component
-const PrimeraApp = () => {
-  const saludo = "Hola Juan Carloh";
+const PrimeraApp = ({saludo}) => {
+  
   return (
     <>
       <h1> {saludo} </h1>
@@ -9,4 +11,7 @@ const PrimeraApp = () => {
   );
 };
 
+PrimeraApp.propTypes = {
+    saludo: PropTypes.string.isRequired
+}
 export default PrimeraApp;
